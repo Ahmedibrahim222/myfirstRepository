@@ -43,6 +43,11 @@
     height: 150px;
 }
 
+.Container {
+    position: relative;
+    display: inline-block;
+}
+
 .ImageText {
     position: absolute;
     top: 50%;
