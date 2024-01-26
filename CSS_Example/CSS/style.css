@@ -1,0 +1,54 @@
+.body {
+    background-color: lightblue;
+}
+
+.h1 {
+    color: black;
+    text-align: center;
+}
+
+.h3 {
+    font-size: 30px;
+}
+
+.tiny {
+    font-size: 11px;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.pfont {
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.orange {
+    color: orange;
+    font-size: 35px;
+}
+
+.styledFont {
+    color: green;
+}
+
+#imgstyle {
+    border: 3px solid #ffb701;
+    width: 150px;
+    height: 150px;
+}
+
+.ImageText {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50% -50%);
+    color: rgb(255, 231, 192);
+    font-family: cursive;
+    font-size: 25px;
+}
