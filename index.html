@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<!-- this doctype tag tells the browser that this file is of type HTML -->
-<html lang="en">
-<!-- this html tag tells the browser that the CODE is of type HTML -->
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- this sets up the web page to be mobile friendly. (first) mobile responsive-->
-        <title>Biography</title>
-        <!-- the title tag displays the title of the page in a browser tab -->
-    </head>
-    <!-- the head tags tells the browser that the code inside it needs to executed first -->
-    <body>
-        <p style="color: red;font-size:large">navbar goes here</p>
-        <!-- the body tag contains the content that is physically web browser itself. -->
-        <h1>About me</h1>
-        <a href="CSS-Example/index.html">Please click this link for more details</a>
-        <p>Hi, I am Ahmed Ibrahim, I am learning Web Development</p>
-        <!-- this is a paragraph tag that blocks a bunch of text into a paragraph -->
-    </body>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this sets up the web page to be mobile friendly. (first) mobile responsive-->
+    <title>Biography</title>
+    <!-- the title tag displays the title of the page in a browser tab -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Student Bio</h1>
+    </header>
+
+    <div class="container">
+      <section id="main-bio">
+        <h2>Ahmed Ibrahim</h2>
+
+        <img
+          id="bio-image"
+          src="CSS-Example\Images\Picsq1.jpeg"
+          alt="Your Name"
+        />
+
+        <p>
+            Meet Ahmed, an accomplished software developer with a talent for crafting efficient and user-friendly applications. 
+            Proficient in Web development, Ahmed excels in problem-solving and thrives in dynamic, collaborative environments.
+            With a passion for staying abreast of the latest technologies, Ahmed bring a commitment to delivering high-quality
+            solutions to every projects.
+        </p>
+      </section>
+
+      <section id="contact-info">
+        <h2>Contact Info</h2>
+        <ul>
+          <li>
+            <strong>Email: </strong> <a href="#">mygmail.com</a></li>
+          </li>
+          <li><strong>Github:</strong> <a href="#">Ahmedibrahim222</a></li>
+          <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
 </html>
