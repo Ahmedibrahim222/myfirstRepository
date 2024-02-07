@@ -1,47 +1,139 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- this sets up the web page to be mobile friendly. (first) mobile responsive-->
-    <title>Biography</title>
-    <!-- the title tag displays the title of the page in a browser tab -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
 
-  <body>
-    <header>
-      <h1>Student Bio</h1>
+    <!-- Link to the CSS path -->
+    <link rel="stylesheet" href="./portfolio/css/style.css"/> 
+</head>
+<body>
+        <!-------------------------- Header Area -------------------------->
+    <header class="header">
+        <div class="logo">
+            <h1 class="h1">Ahmed Ibrahim</h1>
+        </div>
+        <nav>
+            <ul class="horizontal-list">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
+                <li><a href="https://drive.google.com/file/d/1ivhYq1l6vkAPyNpXP_-WvOwE85reyhVy/view?usp=sharing" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="menu-links">
+            <li><a href="#about-me" onclick="toggleMenu()">About Me</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+            <li><a href="#contact-me" onclick="toggleMenu()">Contact Me</a></li>
+        </div>
     </header>
 
-    <div class="container">
-      <section id="main-bio">
-        <h2>Ahmed Ibrahim</h2>
-
-        <img
-          id="bio-image"
-          src="CSS-Example\Images\Picsq1.jpeg"
-          alt="Your Name"
-        />
-
-        <p>
-            Meet Ahmed, an accomplished software developer with a talent for crafting efficient and user-friendly applications. 
-            Proficient in Web development, Ahmed excels in problem-solving and thrives in dynamic, collaborative environments.
-            With a passion for staying abreast of the latest technologies, Ahmed bring a commitment to delivering high-quality
-            solutions to every projects.
-        </p>
-      </section>
-
-      <section id="contact-info">
-        <h2>Contact Info</h2>
-        <ul>
-          <li>
-            <strong>Email: </strong> <a href="#">mygmail.com</a></li>
-          </li>
-          <li><strong>Github:</strong> <a href="#">Ahmedibrahim222</a></li>
-          <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
-        </ul>
-      </section>
+        <!-------------------------- Home Page -------------------------->
+    <div class="image-section">
+        <img src="./portfolio/Images/helpbkg.jpg" alt="img">
+        <div class="image-text">
+            <h2>Welcome to my professional portfolio.</h2>
+            <p>I am Ahmed and I am delighted to have you here.</p>
+        </div>
     </div>
-  </body>
+    
+    <main>
+                <!-------------------------- About Section -------------------------->
+        <section class="section about-section" id="about-me">
+                <div class="content about-content">
+                    <h2>About Me</h2>
+                    <div class="about-details">
+                    <div class="about-pic-container">
+                        <img src="./portfolio/Images/Picsq1.jpeg" alt="EPicsq1" class="about-pic" />
+                        </div>
+                    </div>
+                    <div class="about-details-text">
+                                                <p>
+                            Ahmed Ibrahim is a dedicated Full-Stack Developer holding a Diploma in Hvac technologies
+                            from Humber College. <br />With a robust foundation in both front-end and back-end technologies,
+                            Ahmed excels in creating scalable and efficient web applications. <br />Proficient in HTML, CSS,
+                            and JavaScript, Ahmed leverages frameworks like bootStrap to craft dynamic and responsive
+                            user interfaces.<br />
+                            
+                            On the back-end, Ahmed demonstrates expertise in server-side scripting languages
+                            languages such as Java, utilizing frameworks like Spring boot and maven. <br />Database
+                            management is a strong suit, with Ahmed adept at working with SQL and NoSQL
+                            databases, including MySQL, and PostgreSQL.<br /> Adept at employing development
+                            tools like Git and Github. Ahmed is committed to delivering high-
+                            quality, <br /> maintainable code. Drawing on professional experience, Ahmed has successfully
+                            contributed to few projects, showcasing problem-solving skills and a methodical approach
+                            development challenges.<br /> Continuous learning is a cornerstone of Ahmed's professional
+                            ethos, ensuring adaptability to emerging technologies and industry best practices.<br /> 
+                            
+                            Overall, Ahmed is poised to make substantial contributions to any development team or project with a
+                            proven ability to deliver results.
+                        </p>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+
+                <!-------------------------- Portfolio Section -------------------------->
+        <section class="section portfolio-section" id="portfolio">
+            <div class="portfolio-section-content">
+                <h2>Portfolio</h2>
+                <div class="portfolio-item">
+                    <a href="https://github.com/Ahmedibrahim222/mockitoMVC" target="_blank">
+                    <img src="./portfolio/Images/picsq3.jpg" alt="Project 1">
+                </a>
+                    <div class="item-description">
+                        <h3>mockitoMVC</h3>
+                        <p>This project demonstrates how to use mockitoMVC to write Junit.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                      <a href="https://github.com/Ahmedibrahim222/Console-Finances" target="_blank">
+                    <img src="./portfolio/Images/picsq4.png" alt="Project 2">
+                </a>
+                    <div class="item-description">
+                        <h3>Console-Finances</h3>
+                        <p>This project contains Javascript code for analyzing financial records. The provided dataset, 'finances', 
+                            includes monthly data for profits and losses spanning from January 2010 to February 2017. 
+                            The code calculates various financial metrics and outputs the results both in the console and on web pag</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/Ahmedibrahim222/Acronyms_Api" target="_blank">
+                  <img src="./portfolio/Images/picqs5.jpg" alt="Project 2">
+              </a>
+                  <div class="item-description">
+                      <h3>Acronyms Api</h3>
+                      <p>This project is created with Nodejs for users to be able to
+                        ask about acronym meanings and they get the output for the full acronnym meanings.</p>
+                  </div>
+              </div>
+              
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </section>
+
+                <!-------------------------- Contact Section -------------------------->
+        <section class="section contact-section" id="contact-me">
+            <div class="content contact-details">
+                <div class="contact-header">   
+                    <h2>Contact Me</h2>
+                <ul class="horizontal-list">
+                    <li><a href="ahmedibrahimadek@gmail.com">ahmedibrahimadek@gmail.com</a><br></li>
+                    <li><a href="416-875-5424">416-875-5424</a><br></li>
+                    <li id="linkedin-link"></li>
+                    <li id="github-link"></li>
+                </ul>
+            </div>
+    </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Copyright &#169; 2024 Ahmed. All Rights Reserved.</p>
+    </footer>
+
+    <script src="myPortfolio.js"></script>
+</body>
 </html>

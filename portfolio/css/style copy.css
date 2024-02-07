@@ -1,0 +1,152 @@
+body, h1, h2, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(95, 160, 148);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    font-family: cursive;
+}
+
+nav ul{
+    list-style: no;
+
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+
+section{
+    margin: 15px 0;
+    width: 80%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontal-list{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(33, 113, 91);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
+    max-height: 300px;
+  }
+
+.horizontal-list li{
+    margin-right: 50px;
+    align-items: center;
+
+}
+
+.app-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.app-container a{
+  flex: 1;
+  margin: 10px;
+}
+
+.app-container img{
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-details{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-details p{
+   margin-bottom: 10px;
+  }
+
+  .socials{
+    display: flex;
+    justify-content: center;
+    margin-top:3rem;
+  }
+
+  .socials a{
+    display: inline-block;
+    margin-right: 10px;
+    color: black;
+  }
+
+  @media screen and (max-width:600px){
+    header{
+        font-size: 18px;
+    }
+.menu-links{
+    display:block;
+    
+}
+.horizontal-list{
+    display:none;
+}
+  
+    nav ul li{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .app-container a{
+        flex-basis: 100%;
+    }
+    
+  }
+
+  .app-large{
+    flex-basis: 50%;
+  }
+
+  

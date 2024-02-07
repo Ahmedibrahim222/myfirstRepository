@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+    Contact <em>me for your development work</em> to find out more!
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="ccf81cc4-4f01-4030-a661-62c6d8e0029f">
+    
+        <label for="name">Name:&nbsp;</label><input type="text" id="name" name="name" required><br>
+        <label for="email">EMail:&nbsp;</label><input type="email" id="email" name="email" required><br>
+        <label for="message" style="vertical-align: top;">Message:</label>
+        <textarea id="message" name="message" required placeholder="Enter your message"></textarea><br>
+        <div class="h-captcha" data-captcha="true"></div><br>
+        <button type="submit">Submit Form</button><br>
+    
+    </form>
+    
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>
+
