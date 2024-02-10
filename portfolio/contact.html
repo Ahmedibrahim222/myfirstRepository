@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./css/style.css"/> 
+    <link rel="stylesheet" href="./css/contact.css"/> <!-- Add custom CSS for contact form -->
+</head>
+<body>
+    <div class="contact-form-container">
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form id="contactForm" method="POST" action="https://formspree.io/f/mnqepenq">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Add event listener for form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Submit the form using the default form submission behavior
+            // Formspree will handle the submission and return a response
+
+            // After successful submission, redirect to the main index page
+            window.location.href = "./index.html";
+        });
+    </script>
+    
+</body>
+</html>

@@ -44,24 +44,49 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Adding a resize event listener for responsive behavior
-    window.addEventListener("resize", function () {
-        // Get the screen width using the window's innerWidth property
-        const screenWidth = window.innerWidth;
-
-        // Selecting the H2 element for device name
-        const deviceH2 = document.getElementById('deviceName');
-
-        // Set the text content based on different screen width ranges
-        if (screenWidth >= 320 && screenWidth < 480) {
-            deviceH2.textContent = "Mobile Device";
-        } else if (screenWidth >= 481 && screenWidth <= 1024) {
-            deviceH2.textContent = "Tablet or Small Laptop";
-        } else {
-            deviceH2.textContent = "Large Screen or Desktop";
-        }
+    // Event listener for showing the contact form
+    const emailLink = document.getElementById('showForm');
+    const formContainer = document.getElementById('contactFormContainer');
+    emailLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        formContainer.style.display = 'block';
     });
 
-    // Initial call to adjust device name on page load
-    window.dispatchEvent(new Event('resize'));
+    // Event listener for form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm); // Corrected typo here
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        // Construct the URL for form submission
+        const formUrl = 'https://formspree.io/f/mrgnpndj'; // Change this to your form URL
+
+        // Prepare the request body
+        const requestBody = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        };
+
+        // Send the form data asynchronously
+        fetch(formUrl, requestBody)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to submit the form');
+                }
+                // Optionally, display a success message or redirect the user to a thank you page
+                console.log('Form submitted successfully');
+                window.location.href = "./index.html"; // Redirect to index.html
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                // Optionally, display an error message to the user
+            });
+    });
 });
