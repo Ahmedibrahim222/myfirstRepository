@@ -50,12 +50,13 @@ body {
 /* Header Navigation Styles */
 .header ul {
     display: flex;
-    align-items: center;
-    margin-left: auto;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center; /* Center align items */
+    margin-top: 10px; /* Adjust spacing */
 }
 
 .header ul li {
-    margin: 0 15px;
+    margin: 5px; /* Adjust spacing */
 }
 
 .header ul li a {
@@ -71,62 +72,14 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center content */
     padding: 20px;
-}
-
-/* Horizontal List Styles */
-.horizontal-list {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    font-size: 1.5rem;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* Menu Links Styles */
-.menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: rgb(160, 30, 30);
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-.menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(161, 211, 12);
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.menu-links a:hover {
-    color: rgb(235, 249, 246); /* Change color on hover */
-}
-
-.menu-links li {
-    list-style: none;
-}
-
-.menu-links.open {
-    max-height: 300px;
-}
-
-.horizontal-list li {
-    margin-right: 20px; /* Adjusted margin */
-    align-items: center;
 }
 
 /* Image Section Styles */
 .image-section {
     position: relative;
+    margin-bottom: 20px; /* Add spacing */
 }
 
 .image-section img {
@@ -159,16 +112,13 @@ main {
     align-items: center;
     gap: 30px;
     margin-top: 50px;
+    text-align: left; /* Adjusted to align text properly */
 }
 
 .about-content h2 {
-    font-size: 40px;
+    font-size: 24px;
     color: #fed700;
-    margin-bottom: 5px;
-    top: -50px;
-    text-align: left;
-    position: relative;
-    left: 2vw; /* Adjust the value as needed */
+    margin-bottom: 10px;
 }
 
 .about-pic-container {
@@ -176,8 +126,6 @@ main {
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: auto; /* Move the image container to the right */
-    margin-right: -250px; 
 }
 
 .about-pic {
@@ -188,82 +136,32 @@ main {
 
 .about-details {
     flex: 1;
-    margin-left: 150px; /* Adjust the margin as needed */
+    margin-left: 30px; /* Adjusted the margin */
 }
 
 .about-details-text {
-    margin-left: 350px; /* Adjust as needed */
-    font-family:'Times New Roman', Times, serif;
-}
-
-.about-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Portfolio Section Styles */
-.app-container {
+.portfolio-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.app-container a {
-    flex-basis: calc(50% - 20px);
-    margin: 10px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.app-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.app-container img:hover {
-    transform: scale(1.05);
-}
-
-.portfolio-section h2 {
-    text-align: left;
-    font-size: 40px;
-    color: #fed700;
-    margin-bottom: 20px;
-    margin-right: 20px; /* Adjust the margin to create space from the right side */
-}
-
-.portfolio-section,
-.portfolio-section-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 50px;
-    margin-left: -20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+    gap: 20px; /* Add spacing between items */
+    margin-top: 20px; /* Adjust spacing */
 }
 
 .portfolio-item {
-    flex-basis: calc(33.33% - 20px);
-    margin: 10px 5px;
-    overflow: hidden;
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    max-width: 300px; /* Limit width for better layout */
+    text-align: center;
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
-    transition: transform 0.3s, filter 0.3s; /* Add transition for a smooth effect */
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
 .portfolio-item h3 {
@@ -278,26 +176,26 @@ main {
 
 .portfolio-item:hover img {
     transform: scale(1.05);
-    filter: brightness(80%); /* Adjust brightness on hover */
 }
 
-/* Contact Me Section Styles */
-.contact-details {
+/* Contact Section Styles */
+.contact-section {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    max-width: 1500px;
-    margin: 0;
-    padding: 20px;
-    color: #101010;
-    gap: 20px;
-    text-align: left;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+    gap: 20px; /* Add spacing between items */
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.contact-details {
+    max-width: 600px; /* Limit width for better readability */
+    text-align: center;
 }
 
 .contact-details h2 {
-    font-size: 40px;
+    font-size: 24px;
     color: #fed700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact-details p {
@@ -308,17 +206,11 @@ main {
 .contact-details a {
     color: #101010;
     text-decoration: none;
-    margin-right: 30px;
-    text-decoration: underline;
-    font-size: 19px;
-    font-weight: bold;
-    transition: color 0.3s, font-weight 0.3s;
 }
 
 .contact-details a:hover {
-    text-decoration: underline;
     color: rgb(33, 113, 91);
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .contact-details ul {
@@ -328,87 +220,11 @@ main {
 }
 
 .contact-details li {
-    display: inline-block;
     margin-bottom: 10px;
-}
-
-.contact-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.contact-section h2 {
-    text-align: left;
-    font-size: 40px;
-    color: #fed700;
-    margin-bottom: 20px;
-}
-
-.contact-header h2 {
-    font-size: 40px;
-    color: #fed700;
-    margin-bottom: 20px;
-    margin-right: 160px;
-}
-
-.contact-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.contact-info {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.contact-info li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info a {
-    color: #101010;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    color: rgb(33, 113, 91);
-    text-decoration: underline;
-}
-
-.horizontal-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.horizontal-list ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.horizontal-list li {
-    margin-right: 60px;
 }
 
 /* Footer Styles */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: rgb(95, 160, 148);
@@ -419,94 +235,21 @@ main {
 
 /* Mobile Devices */
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-    }
-
-    .logo h1 {
+    .logo {
         font-size: 20px;
     }
 
     .logo .fa-bolt {
         font-size: 15px;
     }
-
-    .header ul {
-        margin-top: 10px;
-    }
-
-    .header ul li {
-        margin: 5px 0;
-    }
-
-    .header ul li a {
-        font-size: 16px;
-    }
-
-    .image-section img {
-        width: 100%;
-        height: auto;
-    }
-
-    .menu-links {
-        width: 100%;
-        top: 60px;
-        position: absolute;
-    }
-
-    .menu-links.open {
-        max-height: 500px;
-    }
-
-    .footer {
-        padding: 15px;
-    }
 }
 
 /* Small Tablets to Laptops */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
-    }
-
-    .header {
-        padding: 20px;
-    }
-
-    .header ul li {
-        margin: 0 15px;
-    }
-
-    .image-section img {
-        max-width: 100%;
-    }
+    /* No specific changes needed for this range */
 }
 
 /* Large Screens and Desktops */
 @media screen and (min-width: 1025px) {
-    body {
-        font-size: 18px;
-    }
-
-    .header {
-        padding: 25px;
-    }
-
-    .header ul li {
-        margin: 0 20px;
-    }
-
-    .image-section img {
-        max-width: 100%;
-    }
-}
-
-@media screen and (min-width: 1201px) and (orientation: landscape) {
-    /* large LCD screens and beyond */
+    /* No specific changes needed for this range */
 }

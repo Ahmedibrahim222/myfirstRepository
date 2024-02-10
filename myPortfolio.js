@@ -8,22 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const githubContainer = document.getElementById('github-link');
     githubContainer.appendChild(githubLink);
 
-    // Selecting the H2 element for device name
-    const deviceH2 = document.getElementById('deviceName');
-
-    // Adding a resize event listener for responsive behavior
-    window.addEventListener("resize", function () {
-        // Get the screen width using the window's innerWidth property
-        const screenWidth = window.innerWidth;
-
-        // Set the text content based on different screen width ranges
-        if (screenWidth >= 320 && screenWidth < 480) {
-        } else if (screenWidth >= 481 && screenWidth <= 768) {
-        } else if (screenWidth >= 769 && screenWidth <= 1024) {
-        } else {
-        }
-    });
-
     // Function to create links
     function createLink(href, text) {
         const link = document.createElement('a');
@@ -59,4 +43,25 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollToSection(sectionId);
         });
     });
+
+    // Adding a resize event listener for responsive behavior
+    window.addEventListener("resize", function () {
+        // Get the screen width using the window's innerWidth property
+        const screenWidth = window.innerWidth;
+
+        // Selecting the H2 element for device name
+        const deviceH2 = document.getElementById('deviceName');
+
+        // Set the text content based on different screen width ranges
+        if (screenWidth >= 320 && screenWidth < 480) {
+            deviceH2.textContent = "Mobile Device";
+        } else if (screenWidth >= 481 && screenWidth <= 1024) {
+            deviceH2.textContent = "Tablet or Small Laptop";
+        } else {
+            deviceH2.textContent = "Large Screen or Desktop";
+        }
+    });
+
+    // Initial call to adjust device name on page load
+    window.dispatchEvent(new Event('resize'));
 });
