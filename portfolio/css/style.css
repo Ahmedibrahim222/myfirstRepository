@@ -7,7 +7,7 @@ body, h1, h2, ul, li, p {
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(146, 129, 139);
+    background-color: #ece8e8; 
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -188,12 +188,11 @@ main {
 
 .about-details {
     flex: 1;
-    margin-left: 30; /* Adjust the margin as needed */
+    margin-left: 150px; /* Adjust the margin as needed */
 
 }
 
 .about-details-text {
-    font-family: 'Times New Roman', Times, serif;
     margin-left: 350px; /* Adjust as needed */
 
 }
@@ -238,7 +237,7 @@ main {
     font-size: 40px;
     color: #fed700;
     margin-bottom: 20px;
-    margin-right: 20px; /* Adjust the margin to create space from the right side */
+    margin-left: 10px; /* Adjust the margin to create space from the right side */
 }
 .portfolio-section,
 .portfolio-section-content {
@@ -246,7 +245,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: -10px;
     margin-left: -20px;
 }
 
@@ -311,7 +310,7 @@ main {
 .contact-details a {
     color: #101010;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 0px;
     text-decoration: underline;
     font-size: 19px;
     font-weight: bold;
@@ -328,6 +327,8 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-left: 200px; /* Align the skills list to the right */
+
 }
 
 .contact-details li {
@@ -342,6 +343,20 @@ main {
     margin-top: 50px;
 }
 
+.contact-header {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.contact-header h2 {
+    text-align: left;
+    font-size: 40px;
+    color: #fed700;
+    margin-left:40px; /* Push the header to the left */
+
+}
+
 .contact-section h2 {
     text-align: left;
     font-size: 40px;
@@ -349,19 +364,6 @@ main {
     margin-bottom: 20px;
 }
 
-.contact-header h2 {
-    font-size: 40px;
-    color: #fed700;
-    margin-bottom: 20px;
-    margin-right: 160px;
-}
-
-.contact-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px
-}
 
 .contact-info {
     display: flex;
@@ -419,6 +421,92 @@ main {
     color: white;
 }
 
+/* Skills Section Styles */
+.skills-section {
+    padding: 90px 0;
+}
+
+.skills-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills-header {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.skills-header h2 {
+    text-align: left;
+    font-size: 40px;
+    color: #fed700;
+    margin-left:40px; /* Push the header to the left */
+
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 350px; /* Align the skills list to the right */
+    margin-top: -35px; /* Move the skills list up */
+}
+
+.skill {
+    margin-bottom: 20px;
+    display: inline-block; /* Change from flex to inline-block */
+    width: calc(50% - 10px); /* Adjust width to fit two bars with gap */
+    margin-right: 20px; /* Add margin between bars */
+    
+}
+
+.skill:nth-child(odd) {
+    margin-right: 0; /* Remove margin from the last bar in each row */
+}
+
+.skill-name {
+    margin-right: 5px;
+    font-size: BOLD;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 90px;
+    overflow: hidden;
+    width: 800px; /* Adjust width as needed */
+}
+
+.skill-level {
+    height: 100%;
+}
+
+.skill-level {
+    width: 80%; /* Adjust the width based on proficiency */
+    background-color: #f44336; /* Adjust the color as needed */
+}
+
+
+/* Small Tablets to Laptops */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header ul li {
+        margin: 0 15px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+}
+
 /* Responsive Design */
 
 /* Mobile Devices */
@@ -473,24 +561,7 @@ main {
     }
 }
 
-/* Small Tablets to Laptops */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
-    }
 
-    .header {
-        padding: 20px;
-    }
-
-    .header ul li {
-        margin: 0 15px;
-    }
-
-    .image-section img {
-        max-width: 100%;
-    }
-}
 
 /* Large Screens and Desktops */
 @media screen and (min-width: 1025px) {
@@ -547,5 +618,38 @@ main {
     .portfolio-section-content h2{
         text-align: center;
     }
+    .contact-details{
+        text-align: center; /* Center text */
 
+    }
+    .contact-details ul{
+        margin: 0 auto; /* Center text */
+
+    }
+
+    .skills-list {
+        /* Your existing styles */
+        margin: 20px auto; /* Center the list */
+    }
+
+    .skills-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center horizontally */
+        margin-top: 0;
+    }
+    
+    .skills-header h2 {
+        font-size: 40px;
+        color: #fed700;
+        margin: 0; /* Reset margin */
+    }
+    
+    .skill-bar {
+        background-color: #ddd;
+        height: 20px;
+        border-radius: 90px;
+        overflow: hidden;
+        width: 250px; /* Adjust width as needed */
+    }
 }

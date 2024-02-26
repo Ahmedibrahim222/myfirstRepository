@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 // Optionally, display a success message or redirect the user to a thank you page
                 console.log('Form submitted successfully');
-                window.location.href = "./index.html"; // Redirect to index.html
+                window.location.href = "index.html"; // Redirect to index.html
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
